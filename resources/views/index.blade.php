@@ -1,50 +1,18 @@
 <!DOCTYPE html>
-<html lang="zxx">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="img/favicon.png">
-		<title>BlackCode</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/line-awesome.min.css">
-		<link rel="stylesheet" href="css/magnific-popup.css">
-		<link rel="stylesheet" href="css/swiper.min.css">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
+<html lang="en">
+
+<!-- head -->
+    <x-head/>
+<!-- end head -->
+
 	<body>
 
 		<!-- loader -->
-		<div class="loader">
-	      	<div class="loading">
-		        <div class="spinner-grow aloader" role="status">
-		      		<span class="sr-only"></span>
-		    	</div>
-		    </div>
-	    </div>
+		<x-loader/>
 		<!-- end loader -->
 
-
 		<!-- navbar -->
-		<div id="navbar" class="navbar navbar-expand-lg">
-			<div class="container">
-				<a href="#" class="navbar-brand">Black<span>{</span>o<span>}</span>e<span>.</span></a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			        <i class="la la-bars"></i>
-			    </button>
-
-			    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			    	<ul class="navbar-nav ms-auto">
-						<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-						<li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
-						<li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-						<li class="nav-item"><a class="nav-link" href="#testimonial">Testimonial</a></li>
-						<li class="nav-item"><a class="nav-link" href="#contact">Contact us</a></li>
-						<li class="nav-item"><a href="#contact" class="button">Hire us</a></li>
-					</ul>
-			    </div>
-			</div>
-		</div>
+		<x-navbar/>
 		<!-- end navbar -->
 
 
@@ -54,18 +22,23 @@
 				<div class="row align-items-center">
 					<div class="col-md-6">
 						<div class="content">
-							<h5>Hi There, I'm Legiste</h5>
-							<h1>Full Stack Developer</h1>
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Ipsa voluptate reiciendis nesciunt sed, commodi aperiam iste rem blanditiis dicta impedit sequi. Ratione odit, excepturi, numquam a libero maxime aut. Rem?</p>
+							{{--<h5>{BlackCode}</h5>--}}
+							<h1>Empowering </h1>
+                            <h2>Your Digital Journey</h2>
+							<p>At Blackcode, we're passionate about providing innovative web and software solutions
+                                that help individuals and small businesses achieve their goals. With a team of
+                                experienced developers, designers, and project managers, we work closely with our
+                                clients to understand their unique needs and develop customized solutions that
+                                exceed their expectations.</p>
 							<ul>
-								<li><button class="button">Learn More</button></li>
-								<li><a href="#">See our work <i class="la la-arrow-right"></i></a></li>
+								{{--<li><a href="#features"><button class="button">Learn More </button></a></li>--}}
+								<li><a href="#services">View our services <i class="las la-chevron-circle-down"></i></a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="content-image">
-							<img src="img/person.png" alt="">
+							<img src="{{asset('img/person.png')}}" alt="">
 						</div>
 					</div>
 				</div>
@@ -84,8 +57,8 @@
 									<i class="las la-graduation-cap"></i>
 								</div>
 								<div class="text">
-									<h5>Fast Learn</h5>
-									<p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Dolorem natus esse ullam exercitationem soluta ad! Assumenda eum</p>
+									<h5>Quality & Reliable solutions</h5>
+									<p>We pride ourselves on delivering quality and reliable solutions that our clients can count on to help them achieve their goals and stay ahead of the competition. </p>
 								</div>
 							</div>
 						</div>
@@ -95,8 +68,8 @@
 									<i class="la la-tty"></i>
 								</div>
 								<div class="text">
-									<h5>Friendly Support</h5>
-									<p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Dolorem natus esse ullam exercitationem soluta ad! Assumenda eum</p>
+									<h5>Customer Focused</h5>
+									<p>Our friendly and knowledgeable support team is always available to answer questions, provide guidance, and help our clients make the most of our solutions.</p>
 								</div>
 							</div>
 						</div>
@@ -108,8 +81,8 @@
 									<i class="la la-mouse"></i>
 								</div>
 								<div class="text">
-									<h5>Creative</h5>
-									<p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Dolorem natus esse ullam exercitationem soluta ad! Assumenda eum</p>
+									<h5>Creative Approach</h5>
+									<p>Our creative team is dedicated to crafting visually stunning and engaging websites and software that capture our clients' brand identity and leave a lasting impression on their audience.</p>
 								</div>
 							</div>
 						</div>
@@ -119,8 +92,8 @@
 									<i class="la la-biking"></i>
 								</div>
 								<div class="text">
-									<h5>Work Hard</h5>
-									<p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Dolorem natus esse ullam exercitationem soluta ad! Assumenda eum</p>
+									<h5>Agile</h5>
+									<p>Using agile methodologies, we work collaboratively with our clients to ensure our solutions are flexible, scalable, and continuously evolving to meet their changing needs.</p>
 								</div>
 							</div>
 						</div>
@@ -343,12 +316,8 @@
 
 
 		<!-- script -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.bundle.min.js"></script>
-		<script src="js/magnific-popup.min.js"></script>
-		<script src="js/swiper.min.js"></script>
-		<script src="js/main.js"></script>
-
+		<x-script/>
+        <!-- end script -->
 
 	</body>
 </html>
